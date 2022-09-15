@@ -1,7 +1,7 @@
-##FlashCard Buddy
+## FlashCard Buddy
 
 
-##Lab 2
+## Lab 2
 
 ### App Description\
 Study your Capitals and any other subject using the Flashcard study buddy.\
