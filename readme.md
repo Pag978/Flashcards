@@ -5,7 +5,7 @@ Create your own flashcards to study any subject you want with Flashcard Buddy!
 
 ### App Walk-though
 
-<img src="http://g.recordit.co/U1LMj1HckT.gif" width=200><br>
+<img src="http://g.recordit.co/NVXrFxKlW7.gif" width=200><br>
 
 ## Required
 - [x] User can open the creation screen
