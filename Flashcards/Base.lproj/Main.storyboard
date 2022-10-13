@@ -87,6 +87,39 @@
                                     <action selector="didTapOnNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="65f-5h-XrI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dd3-mn-0xP">
+                                <rect key="frame" x="20" y="547" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Seoul">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="28"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOnAnswerOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LYz-d2-Avz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAB-Xb-VzK">
+                                <rect key="frame" x="20" y="697" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Tokyo">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="28"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOnAnswerThree:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y6h-T8-e2X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwA-L1-mfp">
+                                <rect key="frame" x="20" y="622" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Beijing">
+                                    <fontDescription key="titleFontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="28"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapOnAnswerTwo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xUe-dF-Ayr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
@@ -95,6 +128,9 @@
                     <navigationItem key="navigationItem" id="Iau-eS-6La"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="answerOne" destination="Dd3-mn-0xP" id="f3r-ap-J9T"/>
+                        <outlet property="answerThree" destination="MAB-Xb-VzK" id="hAD-QW-bYf"/>
+                        <outlet property="answerTwo" destination="BwA-L1-mfp" id="QLT-Vm-hap"/>
                         <outlet property="backLabel" destination="Skv-eu-Be0" id="A38-q9-Ii9"/>
                         <outlet property="frontLabel" destination="eYT-AT-Gk6" id="ksT-U7-czr"/>
                         <outlet property="nextButton" destination="YeS-kj-unW" id="wqM-IQ-yVg"/>
@@ -118,14 +154,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X5K-fJ-V9Z">
-                                <rect key="frame" x="42" y="344" width="328" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correct Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X5K-fJ-V9Z">
+                                <rect key="frame" x="42" y="141" width="328" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Eh-tn-nWv">
-                                <rect key="frame" x="42" y="237" width="328" height="34"/>
+                                <rect key="frame" x="43" y="85" width="328" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer One" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zSW-47-bbj">
+                                <rect key="frame" x="42" y="199" width="328" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer Two" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RbD-AG-zPC">
+                                <rect key="frame" x="42" y="258" width="328" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correct Answer Three" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QoG-sJ-fRL">
+                                <rect key="frame" x="42" y="317" width="328" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -147,13 +201,16 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="answerOneTextField" destination="zSW-47-bbj" id="JKn-TN-gCF"/>
                         <outlet property="answerTextField" destination="X5K-fJ-V9Z" id="6Ih-Mx-Ga8"/>
+                        <outlet property="answerThreeTextField" destination="QoG-sJ-fRL" id="Lhs-UG-XtU"/>
+                        <outlet property="answerTwoTextField" destination="RbD-AG-zPC" id="dT8-6u-ITe"/>
                         <outlet property="questionTextField" destination="5Eh-tn-nWv" id="GcO-Tj-YXy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jV0-X2-myR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="620" y="108"/>
+            <point key="canvasLocation" x="618.84057971014499" y="107.8125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="iHf-ZD-3le">

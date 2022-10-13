@@ -11,6 +11,9 @@ class CreationViewController: UIViewController {
     
 var flashcardsController: ViewController!
     
+    @IBOutlet weak var answerThreeTextField: UITextField!
+    @IBOutlet weak var answerTwoTextField: UITextField!
+    @IBOutlet weak var answerOneTextField: UITextField!
     @IBOutlet weak var questionTextField: UITextField!
     
     @IBOutlet weak var answerTextField: UITextField!
@@ -28,18 +31,18 @@ var flashcardsController: ViewController!
    
     
     @IBAction func didTapOnDone(_ sender: Any) {
-        
         let questionText = questionTextField.text
-        
         let answerText = answerTextField.text
-        
+        let answerOneText = answerOneTextField.text
+        let answerTwoText = answerTwoTextField.text
+        let answerThreeText = answerThreeTextField.text
         if(questionText == nil || answerText == nil || questionText!.isEmpty || answerText!.isEmpty){
             let alert = UIAlertController(title: "Missing Text",message:"You need to enter a question and answer!", preferredStyle: UIAlertController.Style .alert)
             let okAction = UIAlertAction(title: "OK", style: .default)
             present (alert,animated: true)
             alert.addAction(okAction)
         }else{
-        flashcardsController.updateFlashcard(question: questionText!, answer: answerText!)
+            flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, extraAnswerOne: answerOneText!, extraAnswerTwo: answerTwoText!, extraAnswerThree: answerThreeText!)
         dismiss(animated: true)
         }
         
