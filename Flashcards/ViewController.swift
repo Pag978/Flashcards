@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var backLabel: UILabel!
     @IBOutlet weak var frontLabel: UILabel!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var backCard: UIView!
     @IBOutlet weak var prevButton: UIButton!
     @IBOutlet weak var card: UIView!
     var flashcards = [Flashcards]()
@@ -39,6 +40,19 @@ class ViewController: UIViewController {
         
     }
     override func viewDidLoad() {
+        card.layer.cornerRadius = 20.0
+        card.clipsToBounds = true
+        backCard.layer.cornerRadius = 20.0
+        backCard.clipsToBounds = true
+        answerOne.layer.cornerRadius = 20.0
+        answerOne.clipsToBounds = true
+        answerTwo.layer.cornerRadius = 20.0
+        answerTwo.clipsToBounds = true
+        answerThree.layer.cornerRadius = 20.0
+        answerThree.clipsToBounds = true
+        answerOne.layer.borderWidth = 3.0
+        answerTwo.layer.borderWidth = 3.0
+        answerThree.layer.borderWidth = 3.0
         super.viewDidLoad()
          readSavedFlashcards()
         if flashcards.count == 0{

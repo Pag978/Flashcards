@@ -36,7 +36,7 @@ var flashcardsController: ViewController!
         let answerOneText = answerOneTextField.text
         let answerTwoText = answerTwoTextField.text
         let answerThreeText = answerThreeTextField.text
-        if(questionText == nil || answerText == nil || questionText!.isEmpty || answerText!.isEmpty){
+        if(questionText == nil || answerText == nil || answerOneText == nil || answerTwoText == nil || answerThreeText == nil || questionText!.isEmpty || answerText!.isEmpty || answerOneText!.isEmpty || answerTwoText!.isEmpty || answerThreeText!.isEmpty){
             let alert = UIAlertController(title: "Missing Text",message:"You need to enter a question and answer!", preferredStyle: UIAlertController.Style .alert)
             let okAction = UIAlertAction(title: "OK", style: .default)
             present (alert,animated: true)
